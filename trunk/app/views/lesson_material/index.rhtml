@@ -1,0 +1,19 @@
+<p class="notice"><%= notice %></p>
+
+<form action="uploadFile" method="post" enctype="multipart/form-data">
+  <label >Title:</label>:
+  <input name="title" size="30" type="text" /><br/>
+  <input name="upload" type="file"/>
+
+  <input name="submit" value="Upload" type="submit" />
+
+
+<ul>
+<% for file in @files %>
+<li><a href="/data/<%=file.file_name%>"><%=file.title%></a></li>
+<% end %>
+</ul>
+
+</form>
+
+
