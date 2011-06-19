@@ -1,6 +1,6 @@
 LiveTeacher::Application.routes.draw do
-  get "home/index"
-
+  get "lesson_material/index"
+  post "/lesson_material/uploadFile"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

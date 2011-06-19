@@ -361,3 +361,923 @@ Started GET "/home/index" for 127.0.0.1 at 2011-05-19 13:55:33 -0300
   Processing by HomeController#index as HTML
 Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:23:09 -0300
+
+ActionController::RoutingError (No route matches "/lesson_material/index"):
+  
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:23:47 -0300
+  Processing by LessonMaterialController#index as HTML
+ERROR: compiling _app_views_lesson_material_index_rhtml___313548986632586617_2157940920_2361913808186295576 RAISED /Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...tag ({:action => 'uploadFile'}, 
+...                               ^
+Function body:           def _app_views_lesson_material_index_rhtml___313548986632586617_2157940920_2361913808186295576(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "app/views/lesson_material/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>File Upload</h1>
+');@output_buffer.append= ( start_form_tag ({:action => 'uploadFile'}, 
+                        :multipart => true) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('<p><label for="upload_file">Select File</label> : 
+');@output_buffer.append= ( file_field 'upload', 'datafile' );@output_buffer.safe_concat('</p>
+');@output_buffer.append= ( submit_tag "Upload" );@output_buffer.safe_concat('
+');@output_buffer.append= ( end_form_tag );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/dacruz/Documents/UFRJ/liveteacher/app/controllers/lesson_material_controller.rb:4:in `index'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__3403506801326528032__process_action__4327557161191477676__callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered lesson_material/index.rhtml within layouts/application (15.1ms)
+Completed   in 22ms
+
+ActionView::Template::Error (/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...tag ({:action => 'uploadFile'}, 
+...                               ^):
+    1: <h1>File Upload</h1>
+    2: <%= start_form_tag ({:action => 'uploadFile'}, 
+    3:                         :multipart => true) %>
+    4: <p><label for="upload_file">Select File</label> : 
+    5: <%= file_field 'upload', 'datafile' %></p>
+  app/controllers/lesson_material_controller.rb:4:in `index'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:24:11 -0300
+  Processing by LessonMaterialController#index as HTML
+ERROR: compiling _app_views_lesson_material_index_rhtml___313548986632586617_2156913460_2361913808186295576 RAISED /Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...tag ({:action => 'uploadFile'}, :multipart => true) );@outpu...
+...                               ^
+Function body:           def _app_views_lesson_material_index_rhtml___313548986632586617_2156913460_2361913808186295576(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "app/views/lesson_material/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>File Upload</h1>
+');@output_buffer.append= ( start_form_tag ({:action => 'uploadFile'}, :multipart => true) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('<p><label for="upload_file">Select File</label> : 
+');@output_buffer.append= ( file_field 'upload', 'datafile' );@output_buffer.safe_concat('</p>
+');@output_buffer.append= ( submit_tag "Upload" );@output_buffer.safe_concat('
+');@output_buffer.append= ( end_form_tag );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/dacruz/Documents/UFRJ/liveteacher/app/controllers/lesson_material_controller.rb:4:in `index'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__3403506801326528032__process_action__4327557161191477676__callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed   in 7ms
+
+ActionView::Template::Error (/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...tag ({:action => 'uploadFile'}, :multipart => true) );@outpu...
+...                               ^):
+    1: <h1>File Upload</h1>
+    2: <%= start_form_tag ({:action => 'uploadFile'}, :multipart => true) %>
+    3: <p><label for="upload_file">Select File</label> : 
+    4: <%= file_field 'upload', 'datafile' %></p>
+    5: <%= submit_tag "Upload" %>
+  app/controllers/lesson_material_controller.rb:4:in `index'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:26:27 -0300
+  Processing by LessonMaterialController#index as HTML
+ERROR: compiling _app_views_lesson_material_index_rhtml___313548986632586617_2169190680_2361913808186295576 RAISED /Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...ppend=  form_tag ('uploadFile', :multipart => true) do @outp...
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:8: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_lesson_material_index_rhtml___313548986632586617_2169190680_2361913808186295576(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "app/views/lesson_material/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>File Upload</h1>
+');@output_buffer.append=  form_tag ('uploadFile', :multipart => true) do @output_buffer.safe_concat('
+');@output_buffer.safe_concat('<p><label for="upload_file">Select File</label> : 
+');@output_buffer.append= ( file_field 'upload', 'datafile' );@output_buffer.safe_concat('</p>
+');@output_buffer.append= ( submit_tag "Upload" );@output_buffer.safe_concat('
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/dacruz/Documents/UFRJ/liveteacher/app/controllers/lesson_material_controller.rb:4:in `index'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__3403506801326528032__process_action__4327557161191477676__callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed   in 7ms
+
+ActionView::Template::Error (/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...ppend=  form_tag ('uploadFile', :multipart => true) do @outp...
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:8: syntax error, unexpected keyword_ensure, expecting $end):
+    1: <h1>File Upload</h1>
+    2: <%= form_tag ('uploadFile', :multipart => true) do %>
+    3: <p><label for="upload_file">Select File</label> : 
+    4: <%= file_field 'upload', 'datafile' %></p>
+    5: <%= submit_tag "Upload" %>
+  app/controllers/lesson_material_controller.rb:4:in `index'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:27:54 -0300
+  Processing by LessonMaterialController#index as HTML
+ERROR: compiling _app_views_lesson_material_index_rhtml___313548986632586617_2158006400_2361913808186295576 RAISED /Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...tring=  form_tag ('uploadFile', :multipart => true) do 
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:8: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_lesson_material_index_rhtml___313548986632586617_2158006400_2361913808186295576(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "app/views/lesson_material/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>File Upload</h1>
+');@output_buffer.append_if_string=  form_tag ('uploadFile', :multipart => true) do 
+@output_buffer.safe_concat('<p><label for="upload_file">Select File</label> : 
+');@output_buffer.append= ( file_field 'upload', 'datafile' );@output_buffer.safe_concat('</p>
+');@output_buffer.append= ( submit_tag "Upload" );@output_buffer.safe_concat('
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/dacruz/Documents/UFRJ/liveteacher/app/controllers/lesson_material_controller.rb:4:in `index'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__3403506801326528032__process_action__4327557161191477676__callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered lesson_material/index.rhtml within layouts/application (1.1ms)
+Completed   in 7ms
+
+ActionView::Template::Error (/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting ')'
+...tring=  form_tag ('uploadFile', :multipart => true) do 
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:8: syntax error, unexpected keyword_ensure, expecting $end):
+    1: <h1>File Upload</h1>
+    2: <% form_tag ('uploadFile', :multipart => true) do %>
+    3: <p><label for="upload_file">Select File</label> : 
+    4: <%= file_field 'upload', 'datafile' %></p>
+    5: <%= submit_tag "Upload" %>
+  app/controllers/lesson_material_controller.rb:4:in `index'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:28:11 -0300
+  Processing by LessonMaterialController#index as HTML
+ERROR: compiling _app_views_lesson_material_index_rhtml___313548986632586617_2157116540_2361913808186295576 RAISED /Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected tASSOC, expecting ')'
+...f_string=  form_tag (:action => 'uploadFile', :multipart => ...
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting keyword_end
+...m_tag (:action => 'uploadFile', :multipart => true) do 
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:8: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_lesson_material_index_rhtml___313548986632586617_2157116540_2361913808186295576(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "app/views/lesson_material/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>File Upload</h1>
+');@output_buffer.append_if_string=  form_tag (:action => 'uploadFile', :multipart => true) do 
+@output_buffer.safe_concat('<p><label for="upload_file">Select File</label> : 
+');@output_buffer.append= ( file_field 'upload', 'datafile' );@output_buffer.safe_concat('</p>
+');@output_buffer.append= ( submit_tag "Upload" );@output_buffer.safe_concat('
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/dacruz/Documents/UFRJ/liveteacher/app/controllers/lesson_material_controller.rb:4:in `index'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__3403506801326528032__process_action__4327557161191477676__callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/dacruz/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed   in 6ms
+
+ActionView::Template::Error (/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected tASSOC, expecting ')'
+...f_string=  form_tag (:action => 'uploadFile', :multipart => ...
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:2: syntax error, unexpected ',', expecting keyword_end
+...m_tag (:action => 'uploadFile', :multipart => true) do 
+...                               ^
+/Users/dacruz/Documents/UFRJ/liveteacher/app/views/lesson_material/index.rhtml:8: syntax error, unexpected keyword_ensure, expecting $end):
+    1: <h1>File Upload</h1>
+    2: <% form_tag (:action => 'uploadFile', :multipart => true) do %>
+    3: <p><label for="upload_file">Select File</label> : 
+    4: <%= file_field 'upload', 'datafile' %></p>
+    5: <%= submit_tag "Upload" %>
+  app/controllers/lesson_material_controller.rb:4:in `index'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:33:34 -0300
+  Processing by LessonMaterialController#index as HTML
+Rendered lesson_material/index.rhtml within layouts/application (2.2ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:33:46 -0300
+
+ActionController::RoutingError (No route matches "/lesson_material/uploadFile"):
+  
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:34:23 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"teste!!!!!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x0000010302fba8 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72077-1u9kr77>>, "submit"=>"Upload"}
+Completed   in 0ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.8ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:37:36 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"teste!!!!!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000100b48b50 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72137-8pa6hp>>, "submit"=>"Upload"}
+Completed   in 32ms
+
+NoMethodError (undefined method `[]' for #<ActionDispatch::Http::UploadedFile:0x00000100b48b50>):
+  app/models/lesson_material.rb:4:in `save'
+  app/controllers/lesson_material_controller.rb:10:in `uploadFile'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:40:31 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"teste!!!!!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x0000010179bce0 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72137-dk0jgx>>, "submit"=>"Upload"}
+Completed   in 7ms
+
+Errno::ENOENT (No such file or directory - public/data/3577247694_b757505ff2_o.jpg):
+  app/models/lesson_material.rb:9:in `initialize'
+  app/models/lesson_material.rb:9:in `open'
+  app/models/lesson_material.rb:9:in `save'
+  app/controllers/lesson_material_controller.rb:10:in `uploadFile'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:41:01 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"teste!!!!!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000101784cc0 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72137-1pgs96r>>, "submit"=>"Upload"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 142ms
+
+NoMethodError (undefined method `file_name=' for LessonMaterial(Table doesn't exist):Class):
+  app/models/lesson_material.rb:11:in `save'
+  app/controllers/lesson_material_controller.rb:10:in `uploadFile'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateLessonMaterials (20110619180346)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110619180346')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("lesson_materials")
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:43:21 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"teste!!!!!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x0000010176d070 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72137-1vo3l47>>, "submit"=>"Upload"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 149ms
+
+NoMethodError (undefined method `file_name=' for #<Class:0x00000101734bf8>):
+  app/models/lesson_material.rb:11:in `save'
+  app/controllers/lesson_material_controller.rb:10:in `uploadFile'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 15:44:11 -0300
+  Processing by LessonMaterialController#index as HTML
+Rendered lesson_material/index.rhtml within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:44:18 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"sdfsdf", "upload"=>#<ActionDispatch::Http::UploadedFile:0x0000010162b158 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-60dr3j>>, "submit"=>"Upload"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 165ms
+
+NoMethodError (undefined method `file_name=' for #<Class:0x00000101607dc0>):
+  app/models/lesson_material.rb:11:in `save'
+  app/controllers/lesson_material_controller.rb:10:in `uploadFile'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:45:43 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"sdfsdf", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000101631e68 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-1lj4goy>>, "submit"=>"Upload"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('sdfsdf', '3577247694_b757505ff2_o.jpg', '2011-06-19 18:45:43.712028', '2011-06-19 18:45:43.712028')[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 219ms (Views: 7.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:46:38 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"aeiou", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000100dda828 @original_filename="valums-file-uploader-3fab3d4.zip", @content_type="application/zip", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"valums-file-uploader-3fab3d4.zip\"\r\nContent-Type: application/zip\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-g8xuk5>>, "submit"=>"Upload"}
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('aeiou', 'valums-file-uploader-3fab3d4.zip', '2011-06-19 18:46:38.811422', '2011-06-19 18:46:38.811422')
+Rendered lesson_material/index.rhtml within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:51:01 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"aeiou", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000100bee9d8 @original_filename="valums-file-uploader-3fab3d4.zip", @content_type="application/zip", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"valums-file-uploader-3fab3d4.zip\"\r\nContent-Type: application/zip\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-tmdu1k>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('aeiou', 'valums-file-uploader-3fab3d4.zip', '2011-06-19 18:51:01.493405', '2011-06-19 18:51:01.493405')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 22ms
+
+NoMethodError (undefined method `find_all' for #<Class:0x00000101725950>):
+  app/controllers/lesson_material_controller.rb:6:in `index'
+  app/controllers/lesson_material_controller.rb:12:in `uploadFile'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:51:15 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"aeiou", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000100ef25f8 @original_filename="valums-file-uploader-3fab3d4.zip", @content_type="application/zip", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"valums-file-uploader-3fab3d4.zip\"\r\nContent-Type: application/zip\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-kcsvmf>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('aeiou', 'valums-file-uploader-3fab3d4.zip', '2011-06-19 18:51:15.581542', '2011-06-19 18:51:15.581542')[0m
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 9.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/data/" for 127.0.0.1 at 2011-06-19 15:51:20 -0300
+
+ActionController::RoutingError (No route matches "/data"):
+  
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:52:10 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"aeiou", "upload"=>#<ActionDispatch::Http::UploadedFile:0x0000010151b330 @original_filename="valums-file-uploader-3fab3d4.zip", @content_type="application/zip", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"valums-file-uploader-3fab3d4.zip\"\r\nContent-Type: application/zip\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-1wexbxz>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('aeiou', 'valums-file-uploader-3fab3d4.zip', '2011-06-19 18:52:10.430034', '2011-06-19 18:52:10.430034')[0m
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 8.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:52:38 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"sei lá!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x0000010164e1a8 @original_filename="4696988940_e5ef12c157_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"4696988940_e5ef12c157_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-1ywmvpf>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('sei lá!!', '4696988940_e5ef12c157_o.jpg', '2011-06-19 18:52:38.172409', '2011-06-19 18:52:38.172409')[0m
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.4ms)
+Completed 200 OK in 76ms (Views: 8.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:53:32 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"sei lá!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000101630bf8 @original_filename="4696988940_e5ef12c157_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"4696988940_e5ef12c157_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-bgso83>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('sei lá!!', '4696988940_e5ef12c157_o.jpg', '2011-06-19 18:53:32.111024', '2011-06-19 18:53:32.111024')[0m
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.2ms)
+Completed 200 OK in 128ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:53:46 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"mais um!!!!!!!!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x00000101623c00 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-11vc1rn>>, "submit"=>"Upload"}
+  [1m[36mAREL (241.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('mais um!!!!!!!!!', '3577247694_b757505ff2_o.jpg', '2011-06-19 18:53:46.934374', '2011-06-19 18:53:46.934374')[0m
+  [1m[35mLessonMaterial Load (2.0ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.1ms)
+Completed 200 OK in 528ms (Views: 7.5ms | ActiveRecord: 243.4ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 15:56:25 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"mais um!!!!!!!!!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x000001015f4928 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-9x7ocj>>, "submit"=>"Upload"}
+Completed   in 142ms
+
+ActiveRecord::StatementInvalid (Could not find table 'lesson_materials'):
+  app/models/lesson_material.rb:11:in `new'
+  app/models/lesson_material.rb:11:in `save'
+  app/controllers/lesson_material_controller.rb:11:in `uploadFile'
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateLessonMaterials (20110619180346)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110619180346')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("lesson_materials")
+
+
+Started GET "/lesson_material/" for 127.0.0.1 at 2011-06-19 16:00:00 -0300
+
+ActionController::RoutingError (No route matches "/lesson_material"):
+  
+
+Rendered /Users/dacruz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/lesson_material/index" for 127.0.0.1 at 2011-06-19 16:00:19 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 16:00:30 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Opa!", "upload"=>#<ActionDispatch::Http::UploadedFile:0x0000010161ecf0 @original_filename="3577247694_b757505ff2_o.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"3577247694_b757505ff2_o.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/HP/HP1gu+K1Fl4H3+l4innLSk+++TI/-Tmp-/RackMultipart20110619-72240-1ndmdtu>>, "submit"=>"Upload"}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('Opa!', '3577247694_b757505ff2_o.jpg', '2011-06-19 19:00:30.970786', '2011-06-19 19:00:30.970786')
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (2.4ms)
+Completed 200 OK in 185ms (Views: 7.3ms | ActiveRecord: 0.6ms)
