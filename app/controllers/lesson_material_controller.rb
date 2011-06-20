@@ -8,6 +8,11 @@ class LessonMaterialController < ApplicationController
   end
 
   def uploadFile
+    unless params[:upload]
+        flash[:notice] = 'Escolha um arquivo'
+        self.index
+        return
+    end
     LessonMaterial.save(params[:upload], params[:title])
     flash[:notice] = 'Lesson added'
     self.index
