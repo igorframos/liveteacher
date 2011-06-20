@@ -31,3 +31,72 @@ Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
   Processing by HomeController#index as HTML
 Rendered text template (0.0ms)
 Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"upload"=>"", "title"=>"Teste"}
+Completed   in 1ms
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"upload"=>"", "title"=>"Teste"}
+Completed   in 0ms
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"upload"=>"", "title"=>"Teste"}
+Completed   in 88ms
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"upload"=>"", "title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"upload"=>"", "title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 57ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 56ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 56ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.1ms)
+Completed 200 OK in 56ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 6.2ms | ActiveRecord: 0.2ms)

@@ -1281,3 +1281,765 @@ Started POST "/lesson_material/uploadFile" for 127.0.0.1 at 2011-06-19 16:00:30 
   [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
 Rendered lesson_material/index.rhtml within layouts/application (2.4ms)
 Completed 200 OK in 185ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (4.8ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (219.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (201.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (246.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (192.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-20 08:12:03 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (9.9ms)
+Completed 200 OK in 129ms (Views: 16.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/data/3577247694_b757505ff2_o.jpg" for 127.0.0.1 at 2011-06-20 08:12:11 -0300
+
+ActionController::RoutingError (No route matches "/data/3577247694_b757505ff2_o.jpg"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:14:17 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Dae, champz o/", "upload"=>#<ActionDispatch::Http::UploadedFile:0x9385424 @original_filename="Rakefile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Rakefile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110620-2572-1ma3d57>>, "submit"=>"Upload"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('Dae, champz o/', 'Rakefile', '2011-06-20 11:14:17.568542', '2011-06-20 11:14:17.568542')[0m
+  [1m[35mLessonMaterial Load (0.6ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.1ms)
+Completed 200 OK in 370ms (Views: 13.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/data/3577247694_b757505ff2_o.jpg" for 127.0.0.1 at 2011-06-20 08:14:35 -0300
+
+ActionController::RoutingError (No route matches "/data/3577247694_b757505ff2_o.jpg"):
+  
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-20 08:16:17 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.7ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+SQLite3::SQLException: no such table: lesson_materials: SELECT "lesson_materials".* FROM "lesson_materials"
+Completed   in 115ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: lesson_materials: SELECT "lesson_materials".* FROM "lesson_materials"):
+  app/controllers/lesson_material_controller.rb:6:in `index'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-20 08:16:19 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+SQLite3::SQLException: no such table: lesson_materials: SELECT "lesson_materials".* FROM "lesson_materials"
+Completed   in 10ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: lesson_materials: SELECT "lesson_materials".* FROM "lesson_materials"):
+  app/controllers/lesson_material_controller.rb:6:in `index'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-20 08:16:22 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+SQLite3::SQLException: no such table: lesson_materials: SELECT "lesson_materials".* FROM "lesson_materials"
+Completed   in 10ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: lesson_materials: SELECT "lesson_materials".* FROM "lesson_materials"):
+  app/controllers/lesson_material_controller.rb:6:in `index'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (223.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (138.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateLessonMaterials (20110619180346)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110619180346')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("lesson_materials")
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-20 08:17:08 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 99ms (Views: 7.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:22:08 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+Completed   in 10ms
+
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  app/models/lesson_material.rb:4:in `save'
+  app/controllers/lesson_material_controller.rb:11:in `uploadFile'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:22:15 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+Completed   in 10ms
+
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  app/models/lesson_material.rb:4:in `save'
+  app/controllers/lesson_material_controller.rb:11:in `uploadFile'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:22:20 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+Completed   in 9ms
+
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  app/models/lesson_material.rb:4:in `save'
+  app/controllers/lesson_material_controller.rb:11:in `uploadFile'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:22:27 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Oi", "submit"=>"Upload"}
+Completed   in 11ms
+
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  app/models/lesson_material.rb:4:in `save'
+  app/controllers/lesson_material_controller.rb:11:in `uploadFile'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:29:27 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+Completed   in 9ms
+
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  app/models/lesson_material.rb:4:in `save'
+  app/controllers/lesson_material_controller.rb:11:in `uploadFile'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:30:03 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa9db854 @original_filename="Rakefile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Rakefile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110620-2627-qb58r1>>, "submit"=>"Upload"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('', 'Rakefile', '2011-06-20 11:30:03.218953', '2011-06-20 11:30:03.218953')[0m
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (1.9ms)
+Completed 200 OK in 265ms (Views: 7.9ms | ActiveRecord: 0.9ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (357.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (260.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (247.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (189.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (205.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (182.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (214.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (200.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (228.5ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (126.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (228.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (114.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (209.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (175.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (262.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (226.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (205.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (147.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (202.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (162.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:50:45 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Oi", "upload"=>#<ActionDispatch::Http::UploadedFile:0xab51ff8 @original_filename="Rakefile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Rakefile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110620-2627-1iy6fm>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('Oi', 'Rakefile', '2011-06-20 11:50:45.818882', '2011-06-20 11:50:45.818882')[0m
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.2ms)
+Completed 200 OK in 218ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:50:47 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+Completed   in 9ms
+
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  app/models/lesson_material.rb:4:in `save'
+  app/controllers/lesson_material_controller.rb:16:in `uploadFile'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (236.3ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (154.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (191.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (158.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:52:05 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (9.9ms)
+Completed 200 OK in 35ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:52:06 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (7.9ms)
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:52:07 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (7.9ms)
+Completed 200 OK in 25ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:52:12 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (8.0ms)
+Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-20 08:52:16 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (8.3ms)
+Completed 200 OK in 28ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:52:18 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (7.4ms)
+Completed 200 OK in 24ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-20 08:52:35 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (7.7ms)
+Completed 200 OK in 64ms (Views: 48.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:52:37 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 08:52:49 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Oi, champz o/", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa514488 @original_filename="Gemfile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Gemfile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110620-2627-io9jpa>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('Oi, champz o/', 'Gemfile', '2011-06-20 11:52:49.732612', '2011-06-20 11:52:49.732612')[0m
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.1ms)
+Completed 200 OK in 317ms (Views: 8.6ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (191.9ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (257.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (191.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (250.7ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (154.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (224.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (179.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (240.9ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (85.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (116.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (124.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (191.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (208.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (213.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (178.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (224.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (242.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (240.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (146.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (223.5ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (144.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (101.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (74.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (188.2ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (179.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (246.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (205.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (214.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (179.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (157.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (90.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (212.3ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (190.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (202.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (201.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (184.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (188.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (261.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (168.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-06-20 09:17:58 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa9a7f2c @original_filename="Rakefile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Rakefile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110620-2627-1xn4yuj>>, "submit"=>"Upload"}
+Completed   in 34ms
+
+ActiveRecord::RecordInvalid (Validation failed: Title can't be blank):
+  app/models/lesson_material.rb:17:in `save'
+  app/controllers/lesson_material_controller.rb:16:in `uploadFile'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.5ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
