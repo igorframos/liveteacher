@@ -4,13 +4,15 @@ describe LessonMaterialController do
 
     before :each do
         @mock_file = mock(File)
-        @mock_file.stub!(:original_filename).and_return('blah.txt')
-        @mock_file.stub!(:read).and_return(65)
+        @mock_file.stub!(:original_filename).and_return('blah.txt', 'a.txt', 'b.txt')
+        @mock_file.stub!(:read).and_return(65, 10, 20)
     end
 
     after :each do
         begin
           File.delete('public/data/blah.txt')
+          File.delete('public/data/a.txt')
+          File.delete('public/data/b.txt')
         rescue
         end
     end    
@@ -32,20 +34,12 @@ describe LessonMaterialController do
     end
 
     it 'should find all the files uploaded' do
-        mock_file = mock(File)
-        mock_file.stub!(:original_filename).and_return('a.txt', 'b.txt', 'c.txt')
-        mock_file.stub!(:read).and_return(10, 20, 30)
-
-        post 'uploadFile', {:title => 'arquivo 1', :upload => mock_file}
-        post 'uploadFile', {:title => 'arquivo 2', :upload => mock_file}
-        post 'uploadFile', {:title => 'arquivo 3', :upload => mock_file}
+        post 'uploadFile', {:title => 'arquivo 1', :upload => @mock_file}
+        post 'uploadFile', {:title => 'arquivo 2', :upload => @mock_file}
+        post 'uploadFile', {:title => 'arquivo 3', :upload => @mock_file}
 
         @files = LessonMaterial.find :all
         @files.size.should eql(3)
-
-        File.delete('public/data/a.txt')
-        File.delete('public/data/b.txt')
-        File.delete('public/data/c.txt')
     end
 
 end
