@@ -5,3 +5,11 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 LiveTeacher::Application.load_tasks
+
+desc "Run all examples with RCov"
+Spec::Rake::SpecTask.new('examples_with_rcov') do |t|
+    t.rcov = true
+    t.rcov_opts = ['--exclude', 'spec']
+    t.rcov_opts = ['--exclude', 'config']
+    t.rcov_opts = ['--exclude', 'app/helpers']
+end
