@@ -1,7 +1,5 @@
 class LessonMaterial < ActiveRecord::Base
 
-  validates_presence_of:title
-
   def self.save(upload, title)
     
     name =  upload.original_filename
