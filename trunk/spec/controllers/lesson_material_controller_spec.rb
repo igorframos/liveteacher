@@ -10,7 +10,7 @@ describe LessonMaterialController do
     it 'should flash an error message when there is no title to the upload' do
         mock_file = mock(File)
         post 'uploadFile', {:title => '', :upload => mock_file}
-        flash[:notice].should_not eql('Choose a title to your upload')
+        flash[:notice].should eql('Choose a title to your upload')
     end
 
     it 'should save a file correctly' do
