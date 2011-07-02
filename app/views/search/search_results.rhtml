@@ -1,0 +1,18 @@
+<form action="searchByTitle" method="post" enctype="multipart/form-data">
+  <label >Search by title</label>:
+  <input name="query" size="30" type="text" /><br/>
+
+  <input name="submit" value="Search" type="submit" />
+
+</form>
+
+  <br><br><br>
+  Search results for <%=@query%>
+
+<ul>
+<% for file in @files %>
+<li><a href="/data/<%=file.file_name%>"><%=file.title%></a></li>
+<% end %>
+</ul>
+
+
