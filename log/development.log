@@ -3132,3 +3132,1553 @@ Completed 200 OK in 35ms (Views: 17.9ms | ActiveRecord: 1.4ms)
 [0m
   [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36mSQL (202.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-02 17:30:57 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (10.4ms)
+Completed 200 OK in 221ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 17:32:00 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search.rhtml within layouts/application (61.8ms)
+Completed   in 68ms
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 17:33:37 -0300
+  Processing by SearchController#index as HTML
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered search/search.rhtml within layouts/application (7.5ms)
+Completed 200 OK in 25ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 17:34:14 -0300
+  Processing by SearchController#index as HTML
+  [1m[36mLessonMaterial Load (1.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered search/search.rhtml within layouts/application (8.5ms)
+Completed 200 OK in 63ms (Views: 16.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 17:34:15 -0300
+  Processing by SearchController#index as HTML
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered search/search.rhtml within layouts/application (8.0ms)
+Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 17:34:19 -0300
+  Processing by SearchController#index as HTML
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered search/search.rhtml within layouts/application (58.7ms)
+Completed 200 OK in 79ms (Views: 66.7ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (136.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (92.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (109.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (122.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 18:00:12 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (1.0ms)
+Completed   in 13ms
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 18:00:47 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2011-07-02 18:00:54 -0300
+  Processing by SearchController#index as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Submit"}
+Rendered search/search_home.rhtml within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2011-07-02 18:02:24 -0300
+  Processing by SearchController#index as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Submit"}
+Rendered search/search_home.rhtml within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2011-07-02 18:02:27 -0300
+  Processing by SearchController#index as HTML
+  Parameters: {"query"=>"teste", "submit"=>"Submit"}
+Rendered search/search_home.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for 127.0.0.1 at 2011-07-02 18:03:35 -0300
+  Processing by SearchController#index as HTML
+  Parameters: {"query"=>"teste", "submit"=>"Submit"}
+Rendered search/search_home.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 18:03:38 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"teste", "submit"=>"Submit"}
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 49ms
+
+NoMethodError (undefined method `fin' for #<Class:0x9f8a094>):
+  app/controllers/search_controller.rb:11:in `searchByTitle'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (213.7ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (184.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (299.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (142.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (254.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (146.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (213.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (190.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (277.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (161.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (264.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (159.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (258.9ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (151.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (191.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (190.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (127.9ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (82.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (107.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (90.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (123.3ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (96.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (103.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (82.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 18:20:04 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"teste", "submit"=>"Submit"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (4.6ms)
+Completed 200 OK in 27ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 18:21:36 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"quantum", "submit"=>"Submit"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)
+Rendered search/search_results.rhtml within layouts/application (4.1ms)
+Completed 200 OK in 26ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (230.8ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (169.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (233.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (169.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (244.3ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (157.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (192.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (201.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (212.7ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (238.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (216.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (187.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (221.5ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (148.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (311.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (281.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (222.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (150.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (254.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (146.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (245.8ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (93.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (129.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (102.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (131.7ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (92.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (110.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (100.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (202.2ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (182.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (248.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (139.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (123.8ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (77.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (124.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (98.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (240.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (157.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (201.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (157.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (234.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (107.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (104.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (81.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (134.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (97.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (115.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (93.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (135.9ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (85.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (126.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (82.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (168.9ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (197.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (268.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (210.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (218.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (157.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (243.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (194.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (187.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (187.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (236.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (150.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 19:15:32 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (1.7ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:15:41 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"quantum", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-02 19:16:25 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (8.4ms)
+Completed 200 OK in 27ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:18:00 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:18:13 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)
+Rendered search/search_results.rhtml within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:18:36 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:18:39 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)
+Rendered search/search_results.rhtml within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:19:05 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:19:07 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)
+Rendered search/search_results.rhtml within layouts/application (3.2ms)
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:20:04 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:20:32 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)
+Rendered search/search_results.rhtml within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:21:35 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+ERROR: compiling _app_views_search_search_results_rhtml___536075141_86481950__752192633 RAISED /home/igorfr/Dropbox/Matérias da Faculdade/Desenvolvimento Ágil/Projeto/liveteacher/app/views/search/search_results.rhtml:24: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_search_search_results_rhtml___536075141_86481950__752192633(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "app/views/search/search_results";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<p class="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+
+<form action="searchByTitle" method="post" enctype="multipart/form-data">
+  <label >Search by title</label>:
+  <input name="title" size="30" type="text" /><br/>
+
+  <input name="submit" value="Search" type="submit" />
+
+  <br><br><br>
+');   query = @query 
+@output_buffer.safe_concat('  Search results for ');@output_buffer.append= (query);@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('
+<ul>
+'); for file in @files 
+@output_buffer.safe_concat('<li><a href="/data/');@output_buffer.append= (file.file_name);@output_buffer.safe_concat('">');@output_buffer.append= (file.title);@output_buffer.safe_concat('</a></li>
+'); end 
+@output_buffer.safe_concat('</ul>
+
+</form>
+
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/ruby/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/igorfr/Dropbox/Matérias da Faculdade/Desenvolvimento Ágil/Projeto/liveteacher/app/controllers/search_controller.rb:12:in `searchByTitle'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:430:in `_run__467653426__process_action__55381196__callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/ruby/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered search/search_results.rhtml within layouts/application (24.1ms)
+Completed   in 40ms
+
+ActionView::Template::Error (/home/igorfr/Dropbox/Matérias da Faculdade/Desenvolvimento Ágil/Projeto/liveteacher/app/views/search/search_results.rhtml:24: syntax error, unexpected keyword_ensure, expecting $end):
+0  app/controllers/search_controller.rb:12:in `searchByTitle'
+
+Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (1.2ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:22:18 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (4.1ms)
+Completed 200 OK in 21ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:22:21 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)
+Rendered search/search_results.rhtml within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:23:06 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)[0m
+Rendered search/search_results.rhtml within layouts/application (3.3ms)
+Completed 200 OK in 68ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:23:09 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title)
+Rendered search/search_results.rhtml within layouts/application (19.8ms)
+Completed 200 OK in 37ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:28:21 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')[0m
+Rendered search/search_results.rhtml within layouts/application (54.4ms)
+Completed 200 OK in 71ms (Views: 61.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-02 19:29:42 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Game theory", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa54cef0 @original_filename="Game Theory - A Very Short Introduction.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Game Theory - A Very Short Introduction.pdf\"\r\nContent-Type: application/pdf\r\n", @tempfile=#<File:/tmp/RackMultipart20110702-6655-1g5vp9w>>, "submit"=>"Upload"}
+  [1m[35mSQL (2.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (44.6ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('Game theory', 'Game Theory - A Very Short Introduction.pdf', '2011-07-02 22:29:43.010641', '2011-07-02 22:29:43.010641')[0m
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.6ms)
+Completed 200 OK in 283ms (Views: 9.1ms | ActiveRecord: 46.8ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-02 19:29:57 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"History - Vikings", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa4e6754 @original_filename="Vikings - A Very Short Introduction.pdf", @content_type="application/pdf", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Vikings - A Very Short Introduction.pdf\"\r\nContent-Type: application/pdf\r\n", @tempfile=#<File:/tmp/RackMultipart20110702-6655-1ehzze7>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "created_at", "updated_at") VALUES ('History - Vikings', 'Vikings - A Very Short Introduction.pdf', '2011-07-02 22:29:58.140244', '2011-07-02 22:29:58.140244')[0m
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (3.2ms)
+Completed 200 OK in 222ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (242.3ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (208.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (302.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (157.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-02 19:31:27 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "submit"=>"Upload"}
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (12.2ms)
+Completed 200 OK in 37ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:32:52 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.6ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')
+Rendered search/search_results.rhtml within layouts/application (12.9ms)
+Completed 200 OK in 40ms (Views: 22.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:33:04 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')[0m
+Rendered search/search_results.rhtml within layouts/application (16.8ms)
+Completed 200 OK in 36ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:33:08 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"teste", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.7ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')
+Rendered search/search_results.rhtml within layouts/application (58.4ms)
+Completed 200 OK in 79ms (Views: 64.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:33:13 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"quantum", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')[0m
+Rendered search/search_results.rhtml within layouts/application (10.3ms)
+Completed 200 OK in 30ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 19:33:31 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:33:36 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"quantum", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%quantum%')
+Rendered search/search_results.rhtml within layouts/application (9.0ms)
+Completed 200 OK in 27ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:33:47 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"viking", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')[0m
+Rendered search/search_results.rhtml within layouts/application (9.0ms)
+Completed 200 OK in 24ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 19:33:51 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:33:54 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"viking", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%viking%')
+Rendered search/search_results.rhtml within layouts/application (54.9ms)
+Completed 200 OK in 70ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:34:21 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"quantum", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')[0m
+Rendered search/search_results.rhtml within layouts/application (12.1ms)
+Completed 200 OK in 37ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:34:55 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"quantum", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')
+Rendered search/search_results.rhtml within layouts/application (56.1ms)
+Completed 200 OK in 74ms (Views: 62.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:34:57 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"quantyum", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')[0m
+Rendered search/search_results.rhtml within layouts/application (8.5ms)
+Completed 200 OK in 23ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:35:00 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"viking", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (3.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')
+Rendered search/search_results.rhtml within layouts/application (12.0ms)
+Completed 200 OK in 43ms (Views: 17.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 19:35:03 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:35:06 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"viking", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%viking%')[0m
+Rendered search/search_results.rhtml within layouts/application (10.8ms)
+Completed 200 OK in 28ms (Views: 17.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:35:35 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"viking", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%viking%')
+Rendered search/search_results.rhtml within layouts/application (8.1ms)
+Completed 200 OK in 29ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:35:38 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"quantum", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')[0m
+Rendered search/search_results.rhtml within layouts/application (8.6ms)
+Completed 200 OK in 24ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:36:15 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"title"=>"quantum", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%%')
+Rendered search/search_results.rhtml within layouts/application (54.2ms)
+Completed 200 OK in 72ms (Views: 60.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-02 19:36:19 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (2.9ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:36:21 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"quantum", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%quantum%')[0m
+Rendered search/search_results.rhtml within layouts/application (8.9ms)
+Completed 200 OK in 25ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:36:25 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"viking", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%viking%')
+Rendered search/search_results.rhtml within layouts/application (8.9ms)
+Completed 200 OK in 26ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:36:31 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"Quantum", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%Quantum%')[0m
+Rendered search/search_results.rhtml within layouts/application (9.2ms)
+Completed 200 OK in 25ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:36:35 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"game", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%game%')
+Rendered search/search_results.rhtml within layouts/application (9.6ms)
+Completed 200 OK in 27ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:37:42 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"rake", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%rake%')[0m
+Rendered search/search_results.rhtml within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:38:39 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"rake", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%rake%')
+Rendered search/search_results.rhtml within layouts/application (5.2ms)
+Completed 200 OK in 32ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 19:38:43 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"pool", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%pool%')[0m
+Rendered search/search_results.rhtml within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/searchByTitle?query=%22teste%22" for 127.0.0.1 at 2011-07-02 20:18:57 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"\"teste\""}
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%"teste"%')
+Rendered search/search_results.rhtml within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/searchByTitle?query=teste" for 127.0.0.1 at 2011-07-02 20:19:03 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"teste"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%teste%')[0m
+Rendered search/search_results.rhtml within layouts/application (10.2ms)
+Completed 200 OK in 32ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/searchByTitle?query=teste" for 127.0.0.1 at 2011-07-02 20:20:37 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"teste"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%teste%')
+Rendered search/search_results.rhtml within layouts/application (3.6ms)
+Completed 200 OK in 56ms (Views: 45.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/searchByTitle?query=testa" for 127.0.0.1 at 2011-07-02 20:20:40 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"testa"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%testa%')[0m
+Rendered search/search_results.rhtml within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/searchByTitle?query=viking" for 127.0.0.1 at 2011-07-02 20:20:44 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"viking"}
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%viking%')
+Rendered search/search_results.rhtml within layouts/application (8.9ms)
+Completed 200 OK in 24ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 20:21:26 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"vikings history", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%vikings history%')[0m
+Rendered search/search_results.rhtml within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 20:21:34 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"history vikings", "submit"=>"Search"}
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%history vikings%')
+Rendered search/search_results.rhtml within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-02 20:21:37 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"vikings", "submit"=>"Search"}
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%vikings%')[0m
+Rendered search/search_results.rhtml within layouts/application (8.9ms)
+Completed 200 OK in 25ms (Views: 14.7ms | ActiveRecord: 0.5ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (245.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (147.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (246.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (158.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (114.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (204.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (130.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (100.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (202.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (162.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (213.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (250.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (191.9ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (120.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (124.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (88.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (140.2ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (145.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (280.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (204.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (234.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (106.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (107.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (68.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (134.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (109.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (137.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (94.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.6ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (127.6ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (111.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (224.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (202.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (220.7ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (153.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (204.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (134.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
