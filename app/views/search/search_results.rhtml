@@ -13,6 +13,9 @@
 <% for file in @files %>
 <li><a href="/data/<%=file.file_name%>"><%=file.title%></a></li>
 <% end %>
+<% if @files.size == 0 %>
+    No results found
+<% end %>
 </ul>
 
 
