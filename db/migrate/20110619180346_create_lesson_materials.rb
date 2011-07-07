@@ -3,6 +3,7 @@ class CreateLessonMaterials < ActiveRecord::Migration
     create_table :lesson_materials do |t|
       t.string :title
       t.string :file_name
+      t.string :discipline
 
       t.timestamps
     end

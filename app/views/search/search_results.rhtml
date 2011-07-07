@@ -1,12 +1,42 @@
 <form action="searchByTitle" method="post" enctype="multipart/form-data">
   <label >Search by title</label>:
-  <input name="query" size="30" type="text" /><br/>
+  <input name="query" size="30" type="text" /> <br/>
+  <input name="submit" value="Search by title" type="submit" />
+</form>
 
-  <input name="submit" value="Search" type="submit" />
+<br>
+
+<form action="searchByDiscipline" method="post" enctype="multipart/form-dat"> 
+  <label> Search by discipline </label>:
+  <select name='disciplina'>
+      <option value='EMPTY' selected> Choose... </option>
+      <option value='MAT'> Mathematics </option>
+      <option value='POR'> Portuguese </option>
+      <option value='PHI'> Physics </option>
+      <option value='CHE'> Chemistry </option>
+      <option value='BIO'> Biology </option>
+      <option value='HIS'> History </option>
+      <option value='GEO'> Geography </option>
+      <option value='LIT'> Literature </option>
+      <option value='ART'> Arts </option>
+      <option value='MUS'> Music </option>
+      <option value='ENG'> English </option>
+      <option value='SPA'> Spanish </option>
+      <option value='FRE'> French </option>
+      <option value='GER'> German </option>
+      <option value='PED'> Physical Education </option>
+  </select>
+
+  <br/>
+
+  <input name="submit" value="Search by discipline" type="submit" />
 
 </form>
 
   <br><br><br>
+  <a href="/">Home</a>
+  <br><br><br>
+
   Search results for <%=@query%>
 
 <ul>

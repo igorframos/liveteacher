@@ -4,11 +4,17 @@ class SearchController < ApplicationController
 
   def index
       render :file => 'app/views/search/search_home.rhtml'
-  end
+  end 
 
   def searchByTitle
       @query = params[:query]
       @files = LessonMaterial.where("title LIKE '%#{@query}%'")
+      render :file => 'app/views/search/search_results.rhtml'
+  end
+
+  def searchByDiscipline
+      @query = params[:queryD]
+      @files = LessonMaterial.where("discipline = '#{@query}'")
       render :file => 'app/views/search/search_results.rhtml'
   end
 
