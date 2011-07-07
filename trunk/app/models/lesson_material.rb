@@ -12,6 +12,7 @@ class LessonMaterial < ActiveRecord::Base
     lessonMaterial = LessonMaterial.new
     lessonMaterial.file_name = name   
     lessonMaterial.title = title 
+    lessonMaterial.discipline = 'MAT'
     lessonMaterial.save!
   end
 end

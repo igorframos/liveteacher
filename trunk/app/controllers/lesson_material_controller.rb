@@ -20,6 +20,7 @@ class LessonMaterialController < ApplicationController
         return
     end
 
+    # Colocamos um campo forçado só para testar sem quebrar.
     LessonMaterial.save(params[:upload], params[:title])
     flash[:notice] = 'Lesson added'
     self.index

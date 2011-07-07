@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20110619180346) do
   create_table "lesson_materials", :force => true do |t|
     t.string   "title"
     t.string   "file_name"
+    t.string   "discipline"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
