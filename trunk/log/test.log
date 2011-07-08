@@ -2896,3 +2896,87 @@ Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms)
   Parameters: {"queryD"=>"MAT"}
   [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (discipline = 'MAT')
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.1ms)
+Completed 200 OK in 268ms (Views: 85.0ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "upload"=>#<RSpec::Mocks::Mock:0x54c5a54 @name=File>}
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<RSpec::Mocks::Mock:0x5a09dd0 @name=File>}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'blah.txt', 'MAT', '2011-07-08 00:25:16.511107', '2011-07-08 00:25:16.511107')
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 100ms (Views: 1.5ms | ActiveRecord: 0.9ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"arquivo 1", "upload"=>#<RSpec::Mocks::Mock:0x59c28ae @name=File>}
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('arquivo 1', 'blah.txt', 'MAT', '2011-07-08 00:25:16.607473', '2011-07-08 00:25:16.607473')
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"arquivo 1", "upload"=>#<RSpec::Mocks::Mock:0x59c28ae @name=File>}
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('arquivo 2', 'a.txt', 'MAT', '2011-07-08 00:25:16.614103', '2011-07-08 00:25:16.614103')
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"arquivo 1", "upload"=>#<RSpec::Mocks::Mock:0x59c28ae @name=File>}
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('arquivo 3', 'b.txt', 'MAT', '2011-07-08 00:25:16.620233', '2011-07-08 00:25:16.620233')
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"test"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%test%')[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+  Processing by SearchController#searchByDiscipline as HTML
+  Parameters: {"queryD"=>"MAT"}
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (discipline = 'MAT')
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"", "upload"=>#<RSpec::Mocks::Mock:0x55bc714 @name=File>}
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<RSpec::Mocks::Mock:0x559eb74 @name=File>}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'blah.txt', 'MAT', '2011-07-08 00:25:58.745521', '2011-07-08 00:25:58.745521')
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 31ms (Views: 1.1ms | ActiveRecord: 0.9ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"arquivo 1", "upload"=>#<RSpec::Mocks::Mock:0x53a05fc @name=File>}
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('arquivo 1', 'blah.txt', 'MAT', '2011-07-08 00:25:58.772180', '2011-07-08 00:25:58.772180')
+  [1m[36mLessonMaterial Load (0.1ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"arquivo 1", "upload"=>#<RSpec::Mocks::Mock:0x53a05fc @name=File>}
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('arquivo 2', 'a.txt', 'MAT', '2011-07-08 00:25:58.776341', '2011-07-08 00:25:58.776341')
+  [1m[36mLessonMaterial Load (0.1ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"arquivo 1", "upload"=>#<RSpec::Mocks::Mock:0x53a05fc @name=File>}
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('arquivo 3', 'b.txt', 'MAT', '2011-07-08 00:25:58.779943', '2011-07-08 00:25:58.779943')
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"test"}
+  [1m[36mLessonMaterial Load (0.2ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%test%')[0m
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+  Processing by SearchController#searchByDiscipline as HTML
+  Parameters: {"queryD"=>"MAT"}
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (discipline = 'MAT')
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
