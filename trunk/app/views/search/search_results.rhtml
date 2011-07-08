@@ -8,7 +8,7 @@
 
 <form action="searchByDiscipline" method="post" enctype="multipart/form-dat"> 
   <label> Search by discipline </label>:
-  <select name='disciplina'>
+  <select name='queryD'>
       <option value='EMPTY' selected> Choose... </option>
       <option value='MAT'> Mathematics </option>
       <option value='POR'> Portuguese </option>
@@ -29,7 +29,7 @@
 
   <br/>
 
-  <input name="submit" value="Search by discipline" type="submit" />
+  <input name="submitD" value="Search by discipline" type="submit" />
 
 </form>
 
@@ -37,7 +37,7 @@
   <a href="/">Home</a>
   <br><br><br>
 
-  Search results for <%=@query%>
+  Search results for "<%=@str%>"
 
 <ul>
 <% for file in @files %>

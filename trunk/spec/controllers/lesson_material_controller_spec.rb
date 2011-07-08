@@ -27,6 +27,16 @@ describe LessonMaterialController do
         flash[:notice].should eql('Choose a title to your upload')
     end
 
+    it 'should load the page correctly when an upload is requested' do
+        post 'uploadFile', { :title => 'Teste', :upload => @mock_file }
+        response.should be_success
+    end
+
+    it 'should render the correct page when an upload is made' do
+        post 'uploadFile', { :title => 'Teste', :upload => @mock_file }
+        response.should render_template('index')
+    end
+
     it 'should save a file correctly and display a message' do
         post 'uploadFile', {:title => 'Teste', :upload => @mock_file}
         flash[:notice].should eql('Lesson added')
