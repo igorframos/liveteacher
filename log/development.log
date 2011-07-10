@@ -7072,3 +7072,289 @@ Migrating to CreateLessonMaterials (20110619180346)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("lesson_materials")
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 19:23:54 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (1.3ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (2.3ms)
+Completed 200 OK in 275ms (Views: 23.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2011-07-10 19:23:57 -0300
+  Processing by SearchController#index as HTML
+Rendered search/search_home.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 19:23:59 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[35mLessonMaterial Load (0.4ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-10 19:24:01 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "submit"=>"Upload"}
+  [1m[36mLessonMaterial Load (0.3ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-10 19:24:10 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa371310 @original_filename="Gemfile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Gemfile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110710-2721-tq0lwe>>, "submit"=>"Upload"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (4.1ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'Gemfile', 'MAT', '2011-07-10 22:24:10.353230', '2011-07-10 22:24:10.353230')[0m
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (40.6ms)
+Completed   in 338ms
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-10 19:24:19 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<ActionDispatch::Http::UploadedFile:0x9f0b4c4 @original_filename="Gemfile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Gemfile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110710-2721-ybgzua>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'Gemfile', 'MAT', '2011-07-10 22:24:19.344063', '2011-07-10 22:24:19.344063')[0m
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (1.6ms)
+Completed   in 267ms
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (284.8ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "discipline" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (230.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (202.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (174.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-10 19:25:55 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa4acfa4 @original_filename="Gemfile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Gemfile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110710-2721-1uffupc>>, "submit"=>"Upload"}
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'Gemfile', 'MAT', '2011-07-10 22:25:55.995520', '2011-07-10 22:25:55.995520')[0m
+  [1m[35mLessonMaterial Load (0.2ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (4.3ms)
+Completed   in 249ms
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-10 19:26:03 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa1023cc @original_filename="Gemfile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Gemfile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110710-2721-9x0sj5>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'Gemfile', 'MAT', '2011-07-10 22:26:03.163497', '2011-07-10 22:26:03.163497')[0m
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (1.5ms)
+Completed   in 219ms
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-10 19:26:23 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa4ea944 @original_filename="Gemfile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Gemfile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110710-2721-1tpzbm5>>, "submit"=>"Upload"}
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'Gemfile', 'MAT', '2011-07-10 22:26:23.182900', '2011-07-10 22:26:23.182900')[0m
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.0ms)
+Completed 200 OK in 211ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/searchByDiscipline?query=MAT" for 127.0.0.1 at 2011-07-10 19:26:27 -0300
+  Processing by SearchController#searchByDiscipline as HTML
+  Parameters: {"query"=>"MAT"}
+  [1m[36mLessonMaterial Load (0.4ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (discipline = '')[0m
+Rendered search/search_results.rhtml within layouts/application (3.9ms)
+Completed 200 OK in 59ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (245.0ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "discipline" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (159.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (232.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (167.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (221.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "discipline" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (137.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (290.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (168.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
+
+
+Started GET "/searchByDiscipline?query=MAT" for 127.0.0.1 at 2011-07-10 19:31:54 -0300
+  Processing by SearchController#searchByDiscipline as HTML
+  Parameters: {"query"=>"MAT"}
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (discipline = '')
+Rendered search/search_results.rhtml within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/uploadFile" for 127.0.0.1 at 2011-07-10 19:32:03 -0300
+  Processing by LessonMaterialController#uploadFile as HTML
+  Parameters: {"title"=>"Teste", "upload"=>#<ActionDispatch::Http::UploadedFile:0xa367b94 @original_filename="Gemfile", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"Gemfile\"\r\nContent-Type: application/octet-stream\r\n", @tempfile=#<File:/tmp/RackMultipart20110710-2721-fut209>>, "submit"=>"Upload"}
+  [1m[36mAREL (4.4ms)[0m  [1mINSERT INTO "lesson_materials" ("title", "file_name", "discipline", "created_at", "updated_at") VALUES ('Teste', 'Gemfile', 'MAT', '2011-07-10 22:32:03.504495', '2011-07-10 22:32:03.504495')[0m
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (1.8ms)
+Completed 200 OK in 263ms (Views: 7.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/searchByDiscipline?queryD=MAT" for 127.0.0.1 at 2011-07-10 19:32:05 -0300
+  Processing by SearchController#searchByDiscipline as HTML
+  Parameters: {"queryD"=>"MAT"}
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials" WHERE (discipline = 'MAT')[0m
+Rendered search/search_results.rhtml within layouts/application (10.1ms)
+Completed 200 OK in 26ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/searchByDiscipline?queryD=MAT" for 127.0.0.1 at 2011-07-10 19:33:39 -0300
+  Processing by SearchController#searchByDiscipline as HTML
+  Parameters: {"queryD"=>"MAT"}
+  [1m[35mLessonMaterial Load (0.5ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (discipline = 'MAT')
+Rendered search/search_results.rhtml within layouts/application (9.9ms)
+Completed 200 OK in 25ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-10 19:33:45 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"olá", "submit"=>"Search by title"}
+  [1m[36mLessonMaterial Load (0.6ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+  [1m[35mLessonMaterial Load (0.1ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%olá%')
+Rendered search/search_results.rhtml within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 8.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/searchByTitle" for 127.0.0.1 at 2011-07-10 19:33:48 -0300
+  Processing by SearchController#searchByTitle as HTML
+  Parameters: {"query"=>"teste", "submit"=>"Search by title"}
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+  [1m[35mLessonMaterial Load (0.3ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials" WHERE (title LIKE '%teste%')
+Rendered search/search_results.rhtml within layouts/application (2.0ms)
+Completed 200 OK in 67ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 19:33:57 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[36mLessonMaterial Load (0.5ms)[0m  [1mSELECT "lesson_materials".* FROM "lesson_materials"[0m
+Rendered lesson_material/index.rhtml within layouts/application (8.8ms)
+Completed 200 OK in 31ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (231.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (169.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateLessonMaterials (20110619180346)
+  [1m[36mSQL (1.9ms)[0m  [1mCREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "discipline" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110619180346')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("lesson_materials")
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-10 19:35:02 -0300
+  Processing by LessonMaterialController#index as HTML
+  [1m[35mLessonMaterial Load (9.6ms)[0m  SELECT "lesson_materials".* FROM "lesson_materials"
+Rendered lesson_material/index.rhtml within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 14.1ms | ActiveRecord: 9.6ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.3ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (510.1ms)[0m  CREATE TABLE "lesson_materials" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "file_name" varchar(255), "discipline" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (329.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35mSQL (377.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (154.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110619180346')[0m
