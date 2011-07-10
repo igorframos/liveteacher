@@ -41,7 +41,8 @@
 
 <ul>
 <% for file in @files %>
-<li><a href="/data/<%=file.file_name%>"><%=file.title%></a></li>
+    <li><a href="/data/<%=file.file_name%>"><%=file.title%></a> 
+    [<a href="/searchByDiscipline?queryD=<%=file.discipline%>"><%=file.discipline%></a>]</li>
 <% end %>
 <% if @files.size == 0 %>
     No results found
