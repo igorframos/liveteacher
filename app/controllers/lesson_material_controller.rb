@@ -20,8 +20,15 @@ class LessonMaterialController < ApplicationController
         return
     end
 
+    unless params[:discipline] and params[:discipline] != '' and params[:discipline] != 'EMPTY'
+      flash[:notice] = 'Choose a discipline to your upload'
+      self.index
+      return
+    end
+
+
     # Colocamos um campo forçado só para testar sem quebrar.
-    LessonMaterial.save(params[:upload], params[:title])
+    LessonMaterial.save(params[:upload], params[:title], params[:discipline])
     flash[:notice] = 'Lesson added'
     self.index
   end
