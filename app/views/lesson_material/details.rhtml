@@ -1,0 +1,16 @@
+<table border=1>
+    <tr align="center">
+        <td>Title</td>
+        <td>Discipline</td>
+        <td>--</td>
+    </tr>
+
+    <tr>
+        <td><%= @material.title %></td>
+        <td><%= @material.discipline %></td>
+        <td><a href="/data/<%=@material.file_name%>">Download</a></td> 
+    </tr>
+</table>
+<br>
+
+<a href="/">Home</a>

@@ -4,6 +4,7 @@ LiveTeacher::Application.routes.draw do
   match "/search" => "search#index"
   match "/searchByTitle" => "search#searchByTitle"
   match "/searchByDiscipline" => "search#searchByDiscipline"
+  match "/details" => "lesson_material#details"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

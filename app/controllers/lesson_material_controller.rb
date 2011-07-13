@@ -33,4 +33,8 @@ class LessonMaterialController < ApplicationController
     self.index
   end
 
+  def details
+      @material = LessonMaterial.find_by_id params[:id]
+  end
+
 end
