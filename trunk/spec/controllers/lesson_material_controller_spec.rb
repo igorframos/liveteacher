@@ -64,4 +64,10 @@ describe LessonMaterialController do
         @files.size.should eql(3)
     end
 
+    it 'should find the correct file when asked for its details' do
+        material = LessonMaterial.create!(:title => 'arquivo 1', :file_name => '1.txt', :discipline => 'MAT')
+        get 'details', {:id => material.id}
+        assigns[:material].id.should eql(material.id)
+    end
+
 end
