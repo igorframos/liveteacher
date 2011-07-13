@@ -4,6 +4,7 @@ class CreateComments < ActiveRecord::Migration
       t.string :email
       t.string :name
       t.string :text
+      t.integer :lesson_material_id
 
       t.timestamps :date
     end
