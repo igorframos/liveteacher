@@ -13,4 +13,22 @@
 </table>
 <br>
 
+<table border=1>
+    <tr align="center">
+        <td>Author</td>
+        <td>Date</td>
+        <td>Comment</td>
+    </tr>
+
+    <% for comment in @comments %>
+        <tr>
+            <td><%= comment.name %></td>
+            <td><%= comment.date %></td>
+            <td><%= comment.text %></td>
+        </tr>
+    <% end %>
+</table>
+
+<br>
+
 <a href="/">Home</a>

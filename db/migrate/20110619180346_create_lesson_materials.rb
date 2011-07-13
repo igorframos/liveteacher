@@ -5,7 +5,7 @@ class CreateLessonMaterials < ActiveRecord::Migration
       t.string :file_name
       t.string :discipline
 
-      t.timestamps
+      t.timestamps :date
     end
   end
 

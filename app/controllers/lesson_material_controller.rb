@@ -26,8 +26,6 @@ class LessonMaterialController < ApplicationController
       return
     end
 
-
-    # Colocamos um campo forçado só para testar sem quebrar.
     LessonMaterial.save(params[:upload], params[:title], params[:discipline])
     flash[:notice] = 'Lesson added'
     self.index
@@ -35,6 +33,11 @@ class LessonMaterialController < ApplicationController
 
   def details
       @material = LessonMaterial.find_by_id params[:id]
+      @comments = Comments.find_all_by_lesson_material_id @material.id
+      render :file => 'app/views/lesson_material/details.rhtml'
+  end
+
+  def comment
   end
 
 end
