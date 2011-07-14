@@ -38,6 +38,35 @@ class LessonMaterialController < ApplicationController
   end
 
   def comment
+      unless params[:id] and params[:id].to_i >= 0
+          params[:id] = 1
+          self.details
+          return
+      end
+
+      unless params[:name] and params[:name] != ''
+          self.details
+          return
+      end
+
+      unless params[:email] and params[:email] != ''
+          self.details
+          return
+      end
+
+      unless params[:text] and params[:text] != ''
+          self.details
+          return
+      end
+
+      materialId = params[:id]
+      name = params[:name]
+      email = params[:email]
+      text = params[:text]
+
+      Comments.save(materialId, name, email, text)
+
+      self.details
   end
 
 end
