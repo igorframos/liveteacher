@@ -36,8 +36,12 @@
 <ul>
 All uploads:
 <% for file in @files %>
-    <li><a href="/data/<%=file.file_name%>"><%=file.title%></a> 
-    [<a href="/searchByDiscipline?queryD=<%=file.discipline%>"><%=file.discipline%></a>] <a href="details?id=<%=file.id %>">Details</a></li>
+    <li>
+	<a href="/download/<%=file.id%>"><%=file.title%></a>
+	[<a href="/searchByDiscipline?queryD=<%=file.discipline%>"><%=file.discipline%></a>]
+	downloads <%= file.downloads_count %>
+	<a href="details?id=<%=file.id %>">Details</a>
+    </li>
 <% end %>
 </ul>
 
