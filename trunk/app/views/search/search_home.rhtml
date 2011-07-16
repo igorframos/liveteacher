@@ -1,38 +1,38 @@
-<form action="searchByTitle" method="post" enctype="multipart/form-data">
-  <label >Search by title</label>:
-  <input name="query" size="30" type="text" /> <br>
-  <input name="submit" value="Search by title" type="submit" />
-</form>
+<div class="header">
+</div>
 
-<br>
+<div class="content">
+  <p class="notice"><%= notice %></p>
 
-<form action="searchByDiscipline" method="post" enctype="multipart/form-dat"> 
-  <label> Search by discipline </label>:
-  <select name='queryD'>
-      <option value='EMPTY' selected> Choose... </option>
-      <option value='MAT'> Mathematics </option>
-      <option value='POR'> Portuguese </option>
-      <option value='PHI'> Physics </option>
-      <option value='CHE'> Chemistry </option>
-      <option value='BIO'> Biology </option>
-      <option value='HIS'> History </option>
-      <option value='GEO'> Geography </option>
-      <option value='LIT'> Literature </option>
-      <option value='ART'> Arts </option>
-      <option value='MUS'> Music </option>
-      <option value='ENG'> English </option>
-      <option value='SPA'> Spanish </option>
-      <option value='FRE'> French </option>
-      <option value='GER'> German </option>
-      <option value='PED'> Physical Education </option>
-  </select>
+  <img src="live-teacher-_0017_Buscar.png" class="geral"id="insere"> </img>
+  <div align="center" class="inserir">
+    <form action="searchByTitle" method="post" enctype="multipart/form-data">
 
-  <br/>
+      <p id="titulo">Por título<input name="query" size="30" type="text" class="campo"> </input><input name="submitD" value="Busca por título" type="submit"></input></p>
+    </form>
 
-  <input name="submitD" value="Search by discipline" type="submit" />
+    <form action="searchByDiscipline" method="post" enctype="multipart/form-dat">
 
-</form>
+      <p id="titulo">Por disciplina <select name='queryD'>
+          <option value='EMPTY' selected> Escolha </option>
+          <option value='MAT'> Matematica </option>
+          <option value='POR'> Portugues </option>
+          <option value='PHI'> Fisica </option>
+          <option value='CHE'> Quimica </option>
+          <option value='BIO'> Biologia </option>
+          <option value='HIS'> Historia </option>
+          <option value='GEO'> Geografia </option>
+          <option value='LIT'> Literatura </option>
+          <option value='ART'> Artes </option>
+          <option value='MUS'> Musica </option>
+          <option value='ENG'> Ingles </option>
+          <option value='SPA'> Espanhol </option>
+          <option value='FRE'> Frances </option>
+          <option value='GER'> Alemao </option>
+          <option value='PED'> Educacao Fisica </option>
+      </select><input name="submitD" value="Busca por disciplina" type="submit"></input></p>
+    </form>
+  </div>
 
-<br><br><br>
-<a href="/">Home</a>
+</div>
 
