@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-image: url(live-teacher-_0024_Background.png);
+	background-repeat: repeat;
+	margin-left: 2%;
+	margin-top: 0%;
+	margin-right: 2%;
+	margin-bottom: 0%;
+}
+
+div.header{
+	margin-top:0px;
+	padding-top:0px;
+	background-image:url(teste.png);
+	background-repeat:no-repeat;
+	background-position:top center;
+	width: 896px;
+	height: 215px;
+}
+
+div.content{
+	margin-top:0px;
+	padding-top:0px;
+	background-image:url(live-teacher-_0023_Fundo-Content.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	width: 896px;
+	height: 960px;
+}
+
+div.inserir{
+	margin-top:20px;
+	margin-left:100px;
+	padding-top:0px;
+	background-image:url(live-teacher-_0015_Box-fundo.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	width: 712px;
+	height: 336px;
+}
+
+div.info{
+	margin-top:20px;
+	margin-left:100px;
+	padding-top:0px;
+	width: 712px;
+	height: 336px;
+}
+
+img.geral{ margin-left: 80px;}
+
+img.botao{margin-left: 10px;
+}
+
+p{
+	margin-top: 20px;
+	margin-left: 20px;
+	text-align: left;
+}
+
+h2{
+	margin-left: 80px;
+	font-family:"Comic Sans MS", cursive;
+}
+
+ul{
+}
+
+li{
+	display:block;
+	list-style-type:none;
+	margin-left:80px;
+	margin-top: 10px;
+}
+input.campo,select{margin-left: 60px;}
+
+p.campos{
+	margin-left: 0px;
+	text-align: left;
+}
+
+input{margin-left:10px;}
+
+#carrega{
+	margin-left:20px;
+
+}
+
+#envia{
+	background-image:url(live-teacher-_0005_Bt-inserir.png);
+	background-repeat:no-repeat;
+	height: 72px;
+	width: 174px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+#titulo{
+	text-align:left;
+	text-height: 50%;
+	font-size:24px;
+	font-family:"Comic Sans MS", cursive;
+}
+
+#insere{
+	margin-top:40px;
+}
+
+div.footer{
+	background-image:url(live-teacher-_0022_rodap%C3%A9.png);
+	background-repeat:no-repeat;
+	width: 810px;
+	height: 74px;
+}
+
+#linha{
+	margin-top: 20px;
+	margin-bottom:20px;
+}
+
+#busca{
+	margin-top: 0px;
+}
