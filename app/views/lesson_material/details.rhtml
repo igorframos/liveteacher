@@ -4,16 +4,21 @@
     <tr align="center">
         <td>Title</td>
         <td>Discipline</td>
+        <td>Date</td>
         <td>--</td>
     </tr>
 
     <tr>
         <td><%= @material.title %></td>
         <td><%= @material.discipline %></td>
+        <td><%= @material.created_at %></td>
         <td><a href="/data/<%=@material.file_name%>">Download</a></td> 
     </tr>
 </table>
-<br>
+<br/> <br/>
+
+Author's comment: <br/>
+<p style="margin-left: 20px"> <%= @material.comment %> </p> <br/> <br/>
 
 <table border=1>
     <tr align="center">
@@ -38,19 +43,19 @@
     <% end %>
 </table>
 
-<br>
+<br/>
 
 Leave a comment (all fields are required)
 <form action="comment?id=<%=@material.id%>" method="post" enctype="multipart/form-data">
-  <label>Name:</label><br>
-  <input name="name" size="30" type="text"> <br>
-  <label>Email (will not be visible to others):</label><br>
-  <input name="email" size="30" type="text"><br>
-  <label>Comment:</label><br>
-  <textarea name="text" rows="10" cols="50" wrap="physical">Your comment here</textarea><br>
+  <label>Name:</label><br/>
+  <input name="name" size="30" type="text"> <br/>
+  <label>Email (will not be visible to others):</label><br/>
+  <input name="email" size="30" type="text"><br/>
+  <label>Comment:</label><br/>
+  <textarea name="text" rows="10" cols="50" wrap="physical">Your comment here</textarea><br/>
   <input name="submit" value="Send Comment" type="submit">
 </form>
 
-<br>
+<br/>
 
 <a href="/">Home</a>

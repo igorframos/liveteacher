@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110713142207) do
     t.string   "title"
     t.string   "file_name"
     t.string   "discipline"
+    t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

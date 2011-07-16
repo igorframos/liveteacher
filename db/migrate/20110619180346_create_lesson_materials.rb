@@ -4,8 +4,9 @@ class CreateLessonMaterials < ActiveRecord::Migration
       t.string :title
       t.string :file_name
       t.string :discipline
+      t.string :comment
 
-      t.timestamps :date
+      t.timestamps
     end
   end
 
