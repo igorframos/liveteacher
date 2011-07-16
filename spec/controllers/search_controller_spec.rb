@@ -67,4 +67,19 @@ describe SearchController do
         response.should_not contain('Also not a hit')
     end
 
+    it 'should display a message when there are no results' do
+        post 'searchByTitle', { :query => 'sudo make me a sandwich' }
+        response.should contain('No results found')
+    end
+
+    it 'should display the search string when searching by title' do
+        post 'searchByTitle', { :query => 'sudo make me a sandwich' }
+        response.should contain('sudo make me a sandwich')
+    end
+
+    it 'should display the discipline by wich we are searching' do
+        post 'searchByDiscipline', { :queryD => 'PHY' }
+        response.should contain('PHY')
+    end
+
 end

@@ -24,24 +24,23 @@ describe LessonMaterialController do
 
     it 'should flash an error message when there is no file to upload' do
         post 'uploadFile', {:title => 'Teste', :discipline => 'MAT'}
-        flash[:notice].should eql('Choose a file to upload')
+        response.should contain('Choose a file to upload')
     end
 
     it 'should flash an error message when there is no title to the upload' do
         post 'uploadFile', {:title => '', :upload => @mock_file, :discipline => 'MAT'}
-        flash[:notice].should eql('Choose a title to your upload')
+        response.should contain('Choose a title to your upload')
     end
 
     it 'should flash an error message when there is no discipline to the upload' do
         post 'uploadFile', {:title => 'Teste', :upload => @mock_file}
-        flash[:notice].should eql('Choose a discipline to your upload')
+        response.should contain('Choose a discipline to your upload')
     end
 
     it 'should flash an error message when discipline is EMPTY' do
         post 'uploadFile', {:title => 'Teste', :upload => @mock_file, :discipline => 'EMPTY'}
-        flash[:notice].should eql('Choose a discipline to your upload')
+        response.should contain('Choose a discipline to your upload')
     end
-
 
     it 'should load the page correctly when an upload is requested' do
         post 'uploadFile', { :title => 'Teste', :upload => @mock_file, :discipline => 'MAT' }
@@ -55,8 +54,13 @@ describe LessonMaterialController do
 
     it 'should save a file correctly and display a message' do
         post 'uploadFile', {:title => 'Teste', :upload => @mock_file, :discipline => 'MAT'}
-        flash[:notice].should eql('Lesson added')
+        response.should contain('Lesson added')
         File.open('public/data/id-1-blah.txt', "rb") { |f| f.read.should eql("65") }
+    end
+
+    it 'should display the upload in the upload list after an upload is made' do
+        post 'uploadFile', {:title => 'arquivo 1', :upload => @mock_file, :discipline => 'MAT'}
+        response.should contain('arquivo 1')
     end
 
     it 'should find all the files uploaded' do
@@ -84,7 +88,7 @@ describe LessonMaterialController do
     end
 
     it 'should create a comment correctly' do
-        post 'comment', {:id => @material.id, :name => 'tester', :email => 'tester', :text => 'blah'}
+        post 'comment', {:id => @material.id, :name => 'tester', :email => 'tester@test.com', :text => 'blah'}
 
         @comments = Comments.find :all
         @comments.size.should eql(1)
@@ -119,7 +123,7 @@ describe LessonMaterialController do
     end
 
     it 'should not create a comment linked to a material that does not exist' do
-      post 'comment', {:id => -1, :name => 'tester', :email => 'tester', :text => 'blah'}
+      post 'comment', {:id => 100000, :name => 'tester', :email => 'tester', :text => 'blah'}
 
       @comments = Comments.find :all
       @comments.size.should eql(0)
@@ -136,6 +140,43 @@ describe LessonMaterialController do
       post 'comment', {:id => @material.id, :name => 'Author', :email => 'tester@liveteacher.com', :text => 'Nice'}
 
       response.should_not contain('tester@liveteacher.com')
+    end
+
+    it 'should display an error message if the email address on a comment has no @' do
+      post 'comment', {:id => @material.id, :name => 'Author', :email => 'liveteacher.com', :text => 'Nice'}
+
+      response.should contain('Please, enter a valid email address')
+    end
+
+    it 'should display an error message if the email does not have a dot after the @' do
+      post 'comment', {:id => @material.id, :name => 'Author', :email => 'teacher@liveteacher', :text => 'Nice'}
+
+      response.should contain('Please, enter a valid email address')
+    end
+
+    it 'should accept correctly an email with a dot before the @ and more than one dot after the @' do
+      post 'comment', {:id => @material.id, :name => 'Author', :email => 'l.i.v.e@teacher.com.br', :text => 'Nice'}
+
+      @comments = Comments.find :all
+      @comments.size.should eql(1)
+    end
+
+    it 'should display an error message if there is no comment author' do
+      post 'comment', {:id => @material.id, :name => '', :email => 'tester@liveteacher.com', :text => 'Nice'}
+
+      response.should contain('Please, enter the author name to comment')
+    end
+
+    it 'should display an error message if there is no email address on a comment' do
+      post 'comment', {:id => @material.id, :name => 'Author', :email => '', :text => 'Nice'}
+
+      response.should contain('Please, enter a valid email address')
+    end
+
+    it 'should display an error message if there is no text on a comment' do
+      post 'comment', {:id => @material.id, :name => 'Author', :email => 'tester@liveteacher.com', :text => ''}
+
+      response.should contain('There must be some text on your comment')
     end
 
 end
