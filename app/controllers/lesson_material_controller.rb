@@ -80,7 +80,7 @@ class LessonMaterialController < ApplicationController
     material = LessonMaterial.find_by_id params[:id]
     material.downloads_count += 1
     material.save!
-    redirect_to "/public/data/"+material.file_name
+    redirect_to "/data/"+material.file_name
   end
 
 end

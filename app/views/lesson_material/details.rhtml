@@ -12,10 +12,12 @@
         <td><%= @material.title %></td>
         <td><%= @material.discipline %></td>
         <td><%= @material.created_at %></td>
-        <td><a href="/data/<%=@material.file_name%>">Download</a></td> 
+        <td><a href="/download/<%=@material.id%>">Download</a></td> 
     </tr>
 </table>
 <br/> <br/>
+
+number of downloads: <%= @material.downloads_count %> <br/>
 
 Author's comment: <br/>
 <p style="margin-left: 20px"> <%= @material.comment %> </p> <br/> <br/>

@@ -197,7 +197,7 @@ describe LessonMaterialController do
 
       get 'download', {:id => material.id}
 
-      response.should redirect_to('/public/data/'+material.file_name)
+      response.should redirect_to('/data/'+material.file_name)
     end
 
     it "should increase download_count to the selected material" do

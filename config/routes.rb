@@ -1,7 +1,7 @@
 LiveTeacher::Application.routes.draw do
   match "/" => "lesson_material#index"
   match "/uploadFile" => "lesson_material#uploadFile"
-  match "/download" => "lesson_material#download"
+  match "/download/:id" => "lesson_material#download"
   match "/search" => "search#index"
   match "/searchByTitle" => "search#searchByTitle"
   match "/searchByDiscipline" => "search#searchByDiscipline"
