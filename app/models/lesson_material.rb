@@ -10,10 +10,12 @@ class LessonMaterial < ActiveRecord::Base
       File.open(path, "wb") { |f| f.write(upload.read) }
 
       lessonMaterial = LessonMaterial.new
-      lessonMaterial.file_name = name   
-      lessonMaterial.title = title 
+      lessonMaterial.file_name = name
+      lessonMaterial.title = title
       lessonMaterial.discipline = discipline
+      lessonMaterial.downloads_count = 0
       lessonMaterial.comment = comment
       lessonMaterial.save!
+      lessonMaterial
   end
 end
