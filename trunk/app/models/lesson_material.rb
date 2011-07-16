@@ -1,7 +1,7 @@
 class LessonMaterial < ActiveRecord::Base
 
   has_many :comments
-  def self.save(upload, title, discipline, comment)
+  def self.save(upload, title, discipline, comment="")
       name =  'id-' + LessonMaterial.count.to_s + '-' + upload.original_filename
       directory = "public/data"
       # create the file path
