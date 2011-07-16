@@ -27,7 +27,7 @@ class LessonMaterialController < ApplicationController
       return
     end
 
-    LessonMaterial.save(params[:upload], params[:title], params[:discipline])
+    LessonMaterial.save(params[:upload], params[:title], params[:discipline], params[:comment])
     flash[:notice] = 'Lesson added'
     self.index
   end

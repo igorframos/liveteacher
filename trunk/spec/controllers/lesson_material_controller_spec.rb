@@ -8,7 +8,7 @@ describe LessonMaterialController do
         @mock_file = mock(File)
         @mock_file.stub!(:original_filename).and_return('blah.txt', 'a.txt', 'b.txt')
         @mock_file.stub!(:read).and_return(65, 10, 20)
-        @material = LessonMaterial.create!(:title => 'arquivo 4', :file_name => '1.txt', :discipline => 'MAT')
+        @material = LessonMaterial.create!(:title => 'arquivo 4', :file_name => '1.txt', :discipline => 'MAT', :comment => 'peculiar')
     end
 
     after :each do
@@ -80,6 +80,19 @@ describe LessonMaterialController do
         response.should contain('arquivo 1')
         response.should contain('arquivo 2')
         response.should contain('arquivo 3')
+    end
+    
+    it 'should save the authors comment correctly' do        
+        post 'uploadFile', {:title => 'arquivo 1', :upload => @mock_file, :discipline => 'MAT', :comment => 'authors comment'}
+        
+        @file = LessonMaterial.find_by_comment('authors comment')
+        @file.title.should eql('arquivo 1')
+        #@file.instance_of ? LessonMaterial
+    end
+    
+    it 'should display the authors comment correctly' do
+        get 'details', {:id => @material.id}
+        response.should contain('peculiar')
     end
 
     it 'should find the correct file when asked for its details' do
