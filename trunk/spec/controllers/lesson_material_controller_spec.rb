@@ -19,7 +19,7 @@ describe LessonMaterialController do
           LessonMaterial.delete(@material.id)
         rescue
         end
-    end    
+    end
 
 
     it 'should flash an error message when there is no file to upload' do
@@ -190,6 +190,27 @@ describe LessonMaterialController do
       post 'comment', {:id => @material.id, :name => 'Author', :email => 'tester@liveteacher.com', :text => ''}
 
       response.should contain('There must be some text on your comment')
+    end
+
+    it "should redirect to file url" do
+      material = LessonMaterial.save @mock_file, "Titulo", "MAT"
+
+      get 'download', {:id => material.id}
+
+      response.should redirect_to('/public/data/'+material.file_name)
+    end
+
+    it "should increase download_count to the selected material" do
+      material = LessonMaterial.save @mock_file, "Titulo", "MAT"
+      get 'download', {:id => material.id}
+      
+      LessonMaterial.find_by_id(material.id).downloads_count.should == 1
+    end
+
+    it 'should start the downloads count with 0' do
+        post 'uploadFile', { :title => 'Teste', :upload => @mock_file, :discipline => 'MAT' }
+        materials = LessonMaterial.find :all
+        materials.last.downloads_count.should == 0
     end
 
 end
