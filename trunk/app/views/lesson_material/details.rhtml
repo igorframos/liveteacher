@@ -1,6 +1,3 @@
-<div class="header">
-</div>
-
 <div class="content">
    <img src="detalhes.png" class="geral"id="insere"> </img>
   <div class="info">
@@ -9,9 +6,9 @@
 
     <table border=1>
       <tr align="center">
-        <td>Title</td>
-        <td>Discipline</td>
-        <td>Date</td>
+        <td>Título</td>
+        <td>Disciplina</td>
+        <td>Data</td>
         <td>--</td>
       </tr>
       <tr>
@@ -23,21 +20,21 @@
     </table>
     <br/> <br/>
 
-    number of downloads: <%= @material.downloads_count %> <br/>
+    Downloads: <%= @material.downloads_count %> <br/>
 
-    Author's comment: <br/>
+    Cometário do autor: <br/>
     <p style="margin-left: 20px"> <%= @material.comment %> </p> <br/> <br/>
 
     <table border=1>
       <tr align="center">
-        <td>Author</td>
-        <td>Date</td>
-        <td>Comment</td>
+        <td>Autor</td>
+        <td>Data</td>
+        <td>Comentário</td>
       </tr>
 
       <% if @comments.size == 0 %>
         <tr>
-          <td>No comments on this upload yet.</td>
+          <td>Ainda não há comentários para esse arquivo.</td>
           <td></td>
           <td></td>
         </tr>
@@ -53,15 +50,15 @@
 
     <br/>
 
-    Leave a comment (all fields are required)
+    Deixe seu comentário (todos os campos são obrigatórios)
     <form action="comment?id=<%=@material.id%>" method="post" enctype="multipart/form-data">
-      <label>Name:</label><br/>
+      <label>Nome:</label><br/>
       <input name="name" size="30" type="text"> <br/>
-      <label>Email (will not be visible to others):</label><br/>
+      <label>Email (não será visível para os demais):</label><br/>
       <input name="email" size="30" type="text"><br/>
-      <label>Comment:</label><br/>
-      <textarea name="text" rows="10" cols="50" wrap="physical">Your comment here</textarea><br/>
-      <input name="submit" value="Send Comment" type="submit">
+      <label>Comentário:</label><br/>
+      <textarea name="text" rows="10" cols="50" wrap="physical">Seu comentário aqui.</textarea><br/>
+      <input name="submit" value="Enviar comentário" type="submit">
     </form>
 
     <br/>

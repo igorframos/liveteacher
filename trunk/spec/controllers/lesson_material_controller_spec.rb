@@ -24,22 +24,22 @@ describe LessonMaterialController do
 
     it 'should flash an error message when there is no file to upload' do
         post 'uploadFile', {:title => 'Teste', :discipline => 'MAT'}
-        response.should contain('Choose a file to upload')
+        response.should contain('Escolha um arquivo para enviar')
     end
 
     it 'should flash an error message when there is no title to the upload' do
         post 'uploadFile', {:title => '', :upload => @mock_file, :discipline => 'MAT'}
-        response.should contain('Choose a title to your upload')
+        response.should contain('Escolha um titulo para o seu upload')
     end
 
     it 'should flash an error message when there is no discipline to the upload' do
         post 'uploadFile', {:title => 'Teste', :upload => @mock_file}
-        response.should contain('Choose a discipline to your upload')
+        response.should contain('Escolha uma disciplina para o seu upload')
     end
 
     it 'should flash an error message when discipline is EMPTY' do
         post 'uploadFile', {:title => 'Teste', :upload => @mock_file, :discipline => 'EMPTY'}
-        response.should contain('Choose a discipline to your upload')
+        response.should contain('Escolha uma disciplina para o seu upload')
     end
 
     it 'should load the page correctly when an upload is requested' do
@@ -54,10 +54,9 @@ describe LessonMaterialController do
 
     it 'should save a file correctly and display a message' do
         post 'uploadFile', {:title => 'Teste', :upload => @mock_file, :discipline => 'MAT'}
-        response.should contain('Lesson added')
+        response.should contain('Material enviado')
         File.open('public/data/id-1-blah.txt', "rb") { |f| f.read.should eql("65") }
     end
-
     it 'should display the upload in the upload list after an upload is made' do
         post 'uploadFile', {:title => 'arquivo 1', :upload => @mock_file, :discipline => 'MAT'}
         response.should contain('arquivo 1')
@@ -158,13 +157,13 @@ describe LessonMaterialController do
     it 'should display an error message if the email address on a comment has no @' do
       post 'comment', {:id => @material.id, :name => 'Author', :email => 'liveteacher.com', :text => 'Nice'}
 
-      response.should contain('Please, enter a valid email address')
+      response.should contain('Por favor, entre com um email valido')
     end
 
     it 'should display an error message if the email does not have a dot after the @' do
       post 'comment', {:id => @material.id, :name => 'Author', :email => 'teacher@liveteacher', :text => 'Nice'}
 
-      response.should contain('Please, enter a valid email address')
+      response.should contain('Por favor, entre com um email valido')
     end
 
     it 'should accept correctly an email with a dot before the @ and more than one dot after the @' do
@@ -177,19 +176,19 @@ describe LessonMaterialController do
     it 'should display an error message if there is no comment author' do
       post 'comment', {:id => @material.id, :name => '', :email => 'tester@liveteacher.com', :text => 'Nice'}
 
-      response.should contain('Please, enter the author name to comment')
+      response.should contain('Por favor, entre com o nome do autor para comentar')
     end
 
     it 'should display an error message if there is no email address on a comment' do
       post 'comment', {:id => @material.id, :name => 'Author', :email => '', :text => 'Nice'}
 
-      response.should contain('Please, enter a valid email address')
+      response.should contain('Por favor, entre com um email valido')
     end
 
     it 'should display an error message if there is no text on a comment' do
       post 'comment', {:id => @material.id, :name => 'Author', :email => 'tester@liveteacher.com', :text => ''}
 
-      response.should contain('There must be some text on your comment')
+      response.should contain('Seu comentario precisa ter algum texto')
     end
 
     it "should redirect to file url" do
@@ -211,6 +210,12 @@ describe LessonMaterialController do
         post 'uploadFile', { :title => 'Teste', :upload => @mock_file, :discipline => 'MAT' }
         materials = LessonMaterial.find :all
         materials.last.downloads_count.should == 0
+    end
+
+    it 'should save the rating correctly' do
+        post 'rate', {:id => @material.id , :rating => '5'}
+        ratings = Rating.find :all
+        ratings.size.should eql(1)
     end
 
 end

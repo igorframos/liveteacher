@@ -1,7 +1,3 @@
-
-<div class="header">
-</div>
-
 <div class="content">
   <p class="notice"><%= notice %></p>
 
@@ -14,8 +10,8 @@
           <option value='EMPTY' selected> Escolha </option>
           <option value='MAT'> Matematica </option>
           <option value='POR'> Portugues </option>
-          <option value='PHI'> Fisica </option>
-          <option value='CHE'> Quimica </option>
+          <option value='FIS'> Fisica </option>
+          <option value='QUI'> Quimica </option>
           <option value='BIO'> Biologia </option>
           <option value='HIS'> Historia </option>
           <option value='GEO'> Geografia </option>
@@ -23,10 +19,10 @@
           <option value='ART'> Artes </option>
           <option value='MUS'> Musica </option>
           <option value='ENG'> Ingles </option>
-          <option value='SPA'> Espanhol </option>
-          <option value='FRE'> Frances </option>
-          <option value='GER'> Alemao </option>
-          <option value='PED'> Educacao Fisica </option>
+          <option value='ING'> Espanhol </option>
+          <option value='FRA'> Frances </option>
+          <option value='ALE'> Alemao </option>
+          <option value='EDF'> Educacao Fisica </option>
       </select></p>
 
       <p class="campos">
@@ -34,7 +30,8 @@
 
         </input>
       </p>
-      <p>
+
+      <p>Comentário do autor (opcional)<br/><textarea name="comment" rows=5 cols=50></textarea><br/>
         <input name="Inserir" value="Upload" type="submit" >
 
         </input>
@@ -43,17 +40,17 @@
   </div>
   <img src="live-teacher-_0016_Linha.png" class="geral" id="linha"> </img>
   <h2>Últimos Uploads</h2>
-  <ul>
+  <table style="margin-left: 100px">
     <% for file in @files %>
-      <li>
-        <a href="/download/<%=file.id%>"><%=file.title%></a>
-        [<a href="/searchByDiscipline?queryD=<%=file.discipline%>"><%=file.discipline%></a>]
-        downloads <%= file.downloads_count %>
-      <a href="details?id=<%=file.id %>">Details</a>
-    </li>
+      <tr>
+          <td><a href="/download/<%=file.id%>"><%=file.title%></a></td>
+          <td>[<a href="/searchByDiscipline?queryD=<%=file.discipline%>"><%=file.discipline%></a>]</td>
+          <td><%= file.downloads_count %> downloads</td>
+          <td><a href="details?id=<%=file.id %>">Detalhes</a></td>
+    </tr>
    <% end %>
 
-  </ul>
+  </table>
   <img src="live-teacher-_0016_Linha.png" class="geral" id="linha"> </img>
   <a href="/search"><img src="live-teacher-_0017_Buscar.png" class="geral" id="busca"> </img></a>
 </div>
