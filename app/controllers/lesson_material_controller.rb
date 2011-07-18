@@ -10,25 +10,25 @@ class LessonMaterialController < ApplicationController
 
   def uploadFile
     unless params[:upload]
-        flash[:notice] = 'Choose a file to upload'
+        flash[:notice] = 'Escolha um arquivo para enviar'
         self.index
         return
     end
 
     unless params[:title] and params[:title] != ''
-        flash[:notice] = 'Choose a title to your upload'
+        flash[:notice] = 'Escolha um titulo para o seu upload'
         self.index
         return
     end
 
     unless params[:discipline] and params[:discipline] != '' and params[:discipline] != 'EMPTY'
-      flash[:notice] = 'Choose a discipline to your upload'
+      flash[:notice] = 'Escolha uma disciplina para o seu upload'
       self.index
       return
     end
 
     LessonMaterial.save(params[:upload], params[:title], params[:discipline], params[:comment])
-    flash[:notice] = 'Lesson added'
+    flash[:notice] = 'Material enviado'
     self.index
   end
 
@@ -42,25 +42,25 @@ class LessonMaterialController < ApplicationController
   def comment
       unless params[:id] and params[:id].to_i >= 0 and params[:id].to_i <= LessonMaterial.count
           params[:id] = 1
-          flash[:notice] = 'Something wrong has happened. We\'re allready investigating it'
+          flash[:notice] = 'Algo errado aconteceu e estamos investigando'
           self.details
           return
       end
 
       unless params[:name] and params[:name] != ''
-          flash[:notice] = 'Please, enter the author name to comment'
+          flash[:notice] = 'Por favor, entre com o nome do autor para comentar'
           self.details
           return
       end
 
       unless params[:email] and params[:email] != '' and params[:email] =~ /((\d|\w|\.)+)@(\d|\w)+\.(\d|\w|\.)+/
-          flash[:notice] = 'Please, enter a valid email address'
+          flash[:notice] = 'Por favor, entre com um email valido'
           self.details
           return
       end
 
       unless params[:text] and params[:text] != ''
-          flash[:notice] = 'There must be some text on your comment'
+          flash[:notice] = 'Seu comentario precisa ter algum texto'
           self.details
           return
       end
@@ -72,7 +72,7 @@ class LessonMaterialController < ApplicationController
 
       Comments.save(materialId, name, email, text)
 
-      flash[:notice] = 'Comment successfully added!'
+      flash[:notice] = 'Comentario adicionado corretamente!'
       self.details
   end
 
@@ -81,6 +81,12 @@ class LessonMaterialController < ApplicationController
     material.downloads_count += 1
     material.save!
     redirect_to "/data/"+material.file_name
+  end
+
+  def rate
+      Rating.save(params[:id], params[:grade])
+
+      render :text => 'Sucesso'
   end
 
 end
